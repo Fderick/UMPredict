@@ -58,7 +58,7 @@ def compile_data():
         df['Survey'] = survey_name
         tables.append(df)
 
-    print(tables)
+    #print(tables)
     return tables
     
     
