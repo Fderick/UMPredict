@@ -42,7 +42,7 @@ def compile_data():
      - tables: List of pandas dataframe for every file in Data.
     
     '''
-    data_folder = os.path.normpath('Data')
+    data_folder = os.path.normpath(r'Data\Train_Data')
     
     _ , files = get_folders_and_files(data_folder)
     
@@ -67,7 +67,7 @@ def extract_data(UMP_threshold = -4.0):
     tables = compile_data()
     
     #FeH NUVDered colorColorY bp_rp_dered Teff logg
-    columns_of_interest = ['Survey', 'FeH', 'NUVDered', 'bp_rp_dered', 'Teff', 'logg', 'colorColorY']
+    columns_of_interest = ['Survey', 'FeH', 'NUVDered', 'bp_rp_dered','e_bv', 'Teff', 'logg', 'colorColorY']
     
     for i, df in enumerate(tables):
 
@@ -91,3 +91,11 @@ def extract_data(UMP_threshold = -4.0):
             compiled_data.at[index, 'UMP_flag'] = 0
 
     return compiled_data
+
+
+def read_gaia_galex_data():
+    data = pd.read_csv(r"Data\Test_Data\crossmatched_GalexGaia.csv")
+    columns_of_interest = ['Gaia_ID', 'NUVDered', 'bp_rp_dered','e_bv' ,'Teff', 'logg', 'colorColorY']    
+    return data[columns_of_interest]
+    
+    
