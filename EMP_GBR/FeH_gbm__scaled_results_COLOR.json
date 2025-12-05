@@ -1,0 +1,31 @@
+{
+    "feature_cols": [
+        "Teff",
+        "logg",
+        "bp_rp_dered",
+        "colorColorY",
+        "e_bv"
+    ],
+    "target_col": "FeH",
+    "best_params": {
+        "learning_rate": 0.01,
+        "max_depth": 5,
+        "min_samples_leaf": 10,
+        "n_estimators": 400,
+        "subsample": 0.7
+    },
+    "best_cv_rmse": 0.47956400904873725,
+    "val_rmse": 0.4101122439281749,
+    "val_r2": 0.3179220028924721,
+    "feature_importances": {
+        "Teff": 0.17996808201157566,
+        "logg": 0.17592093881318563,
+        "bp_rp_dered": 0.1790059212023096,
+        "colorColorY": 0.28796395451296236,
+        "e_bv": 0.1771411034599668
+    },
+    "train_size": 469,
+    "val_size": 118,
+    "random_state": 42,
+    "cv_folds": 5
+}

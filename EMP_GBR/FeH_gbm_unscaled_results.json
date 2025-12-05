@@ -1,0 +1,35 @@
+{
+    "feature_cols": [
+        "Teff",
+        "logg",
+        "bpDered",
+        "rpDered",
+        "gDered",
+        "e_bv",
+        "NUVDered"
+    ],
+    "target_col": "FeH",
+    "best_params": {
+        "learning_rate": 0.003,
+        "max_depth": 5,
+        "min_samples_leaf": 5,
+        "n_estimators": 800,
+        "subsample": 0.5
+    },
+    "best_cv_rmse": 0.4966229669847182,
+    "val_rmse": 0.44557974243155385,
+    "val_r2": 0.19484509035655706,
+    "feature_importances": {
+        "Teff": 0.13767671962017305,
+        "logg": 0.17338457511790845,
+        "bpDered": 0.11910632163948857,
+        "rpDered": 0.15169652759975985,
+        "gDered": 0.12037493494509939,
+        "e_bv": 0.13607553913491766,
+        "NUVDered": 0.16168538194265303
+    },
+    "train_size": 469,
+    "val_size": 118,
+    "random_state": 42,
+    "cv_folds": 5
+}
